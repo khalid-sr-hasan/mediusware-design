@@ -1,0 +1,38 @@
+[
+    {
+        "id": "a1b2c3",
+        "service_title": "Web Development",
+        "description": "Comprehensive web development solutions tailored to build responsive and high-performance websites.",
+        "image_url": "http://surl.li/aqkkcp"
+    },
+    {
+        "id": "d4e5f6",
+        "service_title": "E-commerce Solution",
+        "description": "End-to-end e-commerce solutions to set up and scale your online store with secure and seamless experiences.",
+        "image_url": "http://surl.li/fnapqt"
+    },
+    {
+        "id": "g7h8i9",
+        "service_title": "UI/UX Design",
+        "description": "User-centered UI/UX design services focused on creating visually appealing and highly usable interfaces.",
+        "image_url": "http://surl.li/pssecj"
+    },
+    {
+        "id": "j1k2l3",
+        "service_title": "Software Development",
+        "description": "Custom software development services to build robust, scalable, and efficient applications.",
+        "image_url": "http://surl.li/dtjkvr"
+    },
+    {
+        "id": "m4n5o6",
+        "service_title": "Mobile App Development",
+        "description": "Mobile app development services to bring your ideas to life on both iOS and Android platforms.",
+        "image_url": "http://surl.li/zhklau"
+    },
+    {
+        "id": "p7q8r9",
+        "service_title": "API Integration",
+        "description": "API integration services to connect systems, enhance functionality, and streamline processes.",
+        "image_url": "http://surl.li/gdhlbp"
+    }
+]
