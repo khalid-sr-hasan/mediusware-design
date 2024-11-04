@@ -1,4 +1,5 @@
 import { CiCalendar } from "react-icons/ci";
+import logo from "../../public/images/Logo.svg";
 
 export const NavBar = () => {
     const navItems = (
@@ -25,10 +26,10 @@ export const NavBar = () => {
     );
 
     return (
-        <div className="container relative mx-auto">
-            <div className="navbar border absolute left-0 w-full ">
+        <div className="container relative mx-auto z-50">
+            <div className="navbar absolute left-0 w-full text-white">
                 <div className="navbar-start">
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <img className="w-32" src={logo} alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu inter font-medium text-[17px] menu-horizontal px-1">
@@ -88,7 +89,7 @@ export const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black"
                         >
                             <li>
                                 <a>Home</a>

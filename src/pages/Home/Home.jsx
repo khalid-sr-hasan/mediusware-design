@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
 import ServicesCard from "../../components/ServicesCard";
-import { IoArrowForward } from "react-icons/io5";
+import { IoArrowForward, IoSendSharp } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 
 import img1 from "/images/clutch.jpg";
 import img2 from "/images/upwork.jpg";
 import img3 from "/images/google.jpg";
 import img4 from "/images/swd.jpg";
+import ceoImg from "/images/ceo-img.png";
+import { FiDownload, FiPhoneCall } from "react-icons/fi";
+import Review from "../../components/Review";
+import Projects from "../../components/Projects";
 
 const Home = () => {
     const [services, setService] = useState([]);
@@ -22,8 +26,8 @@ const Home = () => {
         <div className="">
             <Banner />
 
-            <div className="container mx-auto py-8 md:py-16 lg:py-28">
-                <div className="mb-16">
+            <div className="container mx-auto px-2 md:px-0 py-8 md:py-16 lg:py-28">
+                <div className="mb-8 lg:mb-16">
                     <h2 className="text-xl md:text-3xl lg:text-5xl text-center font-semibold">
                         Things We’re{" "}
                         <span className="text-[#2EB8A2]">Good At</span>
@@ -42,8 +46,87 @@ const Home = () => {
                     </button>
                 </div>
             </div>
+
+            {/* about us */}
+            <div className="py-16 px-2 md:px-0 lg:py-28 bg-[#F0F8FF] ">
+                <div className="container mx-auto ">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 relative">
+                        <div className="relative rounded-2xl overflow-hidden">
+                            <img
+                                className="w-full"
+                                src="http://surl.li/wneybf"
+                                alt=""
+                            />
+                            <img
+                                className="absolute w-14 lg:w-20 top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 z-50"
+                                src="./images/play.png"
+                                alt=""
+                            />
+                            <div className="absolute inset-0 bg-black opacity-15"></div>
+                        </div>
+                        <div className=" lg:absolute lg:w-3/5 mt-6 lg:right-0 lg:top-1/2 lg:-translate-y-1/2  rounded-lg border p-4 lg:p-8 bg-white  lg:mt-0 ">
+                            <h2 className="text-xl md:text-3xl lg:text-5xl mb-4  font-semibold">
+                                A Little Bit {""}
+                                <span className="text-[#2EB8A2]">About Us</span>
+                            </h2>
+                            <p className="text-xs md:text-base">
+                                Incepted in 2015, Mediusware Ltd. has been
+                                serving as a leading IT Solution provider in USA
+                                & Bangladesh. Our aim is to help businesses all
+                                around the world by providing the digital
+                                solutions according to their need. Serving a
+                                number of renowned companies from the USA, UK,
+                                and many other countries, we have already
+                                created a wide range of satisfied clients!
+                            </p>
+
+                            <div className="mt-4 grid gap-4 grid-cols-3 ">
+                                <div className="bg-[#F1F5F9] p-4 rounded-lg">
+                                    <h5 className="text-xl md:text-3xl mb-2 font-semibold">
+                                        800+
+                                    </h5>
+                                    <p className="text-xs md:text-base">
+                                        Projects Completed
+                                    </p>
+                                </div>
+                                <div className="bg-[#F1F5F9] p-4 rounded-lg">
+                                    <h5 className="text-xl md:text-3xl mb-2 font-semibold">
+                                        100+
+                                    </h5>
+                                    <p className="text-xs md:text-base">
+                                        Team Members
+                                    </p>
+                                </div>
+
+                                <div className="bg-[#F1F5F9] p-4 rounded-lg">
+                                    <h5 className="text-xl md:text-3xl mb-2 font-semibold">
+                                        1000+
+                                    </h5>
+                                    <p className="text-xs md:text-base">
+                                        Happy Customers
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="mt-5 md:mt-8 flex flex-col md:flex-row gap-6">
+                                <button className="btn px-6 btn-info text-white">
+                                    <FiPhoneCall />
+                                    Contact Us
+                                </button>
+                                <button className="btn bg-transparent border border-gray-300 px-6 btn-info hover:text-white ">
+                                    <FiDownload />
+                                    Company Deck
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <AboutUs1 /> */}
+
             {/* work together section */}
-            <div className="container mx-auto py-28">
+            <div className="container mx-auto px-2 md:px-0 py-16 lg:py-28">
                 <div className="grid gap-6 grid-cols-12">
                     <div className=" col-span-12 lg:col-span-6">
                         <h3 className="text-xl font-semibold mb-4  md:font-bold md:text-3xl lg:text-5xl">
@@ -139,212 +222,14 @@ const Home = () => {
             </div>
 
             {/*  */}
-            <div className="bg-[#F0F8FF] py-28">
-                <div className="container mx-auto">
-                    <div className="md:w-10/12 lg:w-8/12 mx-auto mb-16">
-                        <div className="text-center ">
-                            <h3 className="text-xl mb-6 font-semibold  md:font-bold md:text-3xl lg:text-5xl">
-                                What the People {""}
-                                <span className="text-[#2EB8A2]">
-                                    Are Saying
-                                </span>
-                            </h3>
-                            <p>
-                                Explore success stories from clients across a
-                                range of industries, spanning from techpreneurs
-                                and start-ups to established enterprises.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                        <div className="w-full  border p-5 overflow-hidden bg-white rounded-lg shadow-lg">
-                            <div className="relative">
-                                <img
-                                    className="object-cover  rounded-lg w-full h-56"
-                                    src="http://surl.li/ffojfw"
-                                    alt="avatar"
-                                />
-
-                                <img
-                                    className="absolute w-12 top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2"
-                                    src="./images/play.png"
-                                    alt=""
-                                />
-                            </div>
-
-                            <div className="pt-5 ">
-                                <h3 className="text-lg font-medium mb-4">
-                                    Mediusware renewed our trust in outsourcing
-                                    IT development in the USA.
-                                </h3>
-                                <p>John Doe</p>
-                                <p className="text-sm">Software Engineer</p>
-                            </div>
-                        </div>
-                        <div className="w-full  border p-5 overflow-hidden bg-white rounded-lg shadow-lg">
-                            <div className="relative">
-                                <img
-                                    className="object-cover  rounded-lg w-full h-56"
-                                    src="http://surl.li/ffojfw"
-                                    alt="avatar"
-                                />
-
-                                <img
-                                    className="absolute w-12 top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2"
-                                    src="./images/play.png"
-                                    alt=""
-                                />
-                            </div>
-
-                            <div className="pt-5 ">
-                                <h3 className="text-lg font-medium mb-4">
-                                    Mediusware renewed our trust in outsourcing
-                                    IT development in the USA.
-                                </h3>
-                                <p>John Doe</p>
-                                <p className="text-sm">Software Engineer</p>
-                            </div>
-                        </div>
-                        <div className="w-full  border p-5 overflow-hidden bg-white rounded-lg shadow-lg">
-                            <div className="relative">
-                                <img
-                                    className="object-cover  rounded-lg w-full h-56"
-                                    src="http://surl.li/ffojfw"
-                                    alt="avatar"
-                                />
-
-                                <img
-                                    className="absolute w-12 top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2"
-                                    src="./images/play.png"
-                                    alt=""
-                                />
-                            </div>
-
-                            <div className="pt-5 ">
-                                <h3 className="text-lg font-medium mb-4">
-                                    Mediusware renewed our trust in outsourcing
-                                    IT development in the USA.
-                                </h3>
-                                <p>John Doe</p>
-                                <p className="text-sm">Software Engineer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Review />
 
             {/* projects */}
-            <div className="container mx-auto py-28">
-                <div className="grid gap-4 grid-cols-12">
-                    <div className="col-span-12 md:col-span-10">
-                        <h3 className="text-xl mb-6 font-semibold  md:font-bold md:text-3xl lg:text-5xl">
-                            Projects We’d Hang on
-                            <span className="text-[#2EB8A2]">
-                                Our Refrigerator
-                            </span>
-                        </h3>
-                        <p>
-                            Discover our latest work, showcasing innovative
-                            solutions and successful collaborations that
-                            highlight our expertise in delivering high-quality
-                            software development projects.
-                        </p>
-                    </div>
-                    <div className="col-span-12 lg:col-span-2 lg:flex lg:justify-end lg:items-end">
-                        <button className="btn px-6 btn-info text-white">
-                            See All
-                            <IoArrowForward />
-                        </button>
-                    </div>
-                </div>
-
-                <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    <div className="card card-compact  overflow-hidden  shadow-xl">
-                        <figure>
-                            <img
-                                className=" w-full  h-[250px] lg:h-[320px]"
-                                src="http://surl.li/jsfkbo"
-                                alt="Shoes"
-                            />
-                        </figure>
-                        <div className="card-body bg-[#F0F8FF]">
-                            <h2 className="card-title font-semibold">
-                                Go Thruhike Website Redesign
-                            </h2>
-                            <p>
-                                Thruhike is the ultimate platform for
-                                discovering and sharing your favorite places and
-                                products. Our mission is to celebrate local
-                                business and inspire new experiences.
-                            </p>
-                            <div className="mt-4">
-                                <button className="flex items-center gap-4 text-[#0C98EB] font-semibold">
-                                    <span> View Project</span>{" "}
-                                    <IoIosArrowForward />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="card card-compact  overflow-hidden  shadow-xl">
-                        <figure>
-                            <img
-                                className="w-full h-[250px] lg:h-[320px]"
-                                src="http://surl.li/mcjetj"
-                                alt="Shoes"
-                            />
-                        </figure>
-                        <div className="card-body bg-[#F0F8FF]">
-                            <h2 className="card-title font-semibold">
-                                Go Thruhike Website Redesign
-                            </h2>
-                            <p>
-                                Thruhike is the ultimate platform for
-                                discovering and sharing your favorite places and
-                                products. Our mission is to celebrate local
-                                business and inspire new experiences.
-                            </p>
-                            <div className="mt-4">
-                                <button className="flex items-center gap-4 text-[#0C98EB] font-semibold">
-                                    <span> View Project</span>{" "}
-                                    <IoIosArrowForward />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card card-compact  overflow-hidden  shadow-xl">
-                        <figure>
-                            <img
-                                className="w-full h-[250px] lg:h-[320px]"
-                                src="http://surl.li/lipblf"
-                                alt="Shoes"
-                            />
-                        </figure>
-                        <div className="card-body bg-[#F0F8FF]">
-                            <h2 className="card-title font-semibold">
-                                Go Thruhike Website Redesign
-                            </h2>
-                            <p>
-                                Thruhike is the ultimate platform for
-                                discovering and sharing your favorite places and
-                                products. Our mission is to celebrate local
-                                business and inspire new experiences.
-                            </p>
-                            <div className="mt-4">
-                                <button className="flex items-center gap-4 text-[#0C98EB] font-semibold">
-                                    <span> View Project</span>{" "}
-                                    <IoIosArrowForward />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Projects />
 
             {/*  */}
-            <div className="bg-[#F0F8FF] py-28">
-                <div className="container mx-auto">
+            <div className="bg-[#F0F8FF] py-16 lg:py-28">
+                <div className="container mx-auto px-2 md:px-0">
                     <div className="md:w-10/12 lg:w-8/12 mx-auto ">
                         <div className="text-center ">
                             <h3 className="text-xl mb-6 font-semibold  md:font-bold md:text-3xl lg:text-5xl">
@@ -378,43 +263,47 @@ const Home = () => {
             </div>
 
             {/* news latter */}
-            <div className="container mx-auto my-28 rounded-xl bg-[#072B4A]">
-                <div className="flex flex-col lg:flex-row justify-between items-center p-4 md:p-16">
-                    <div className="text-white">
-                        <h3 className="text-[18px] md:text-xl lg:text-3xl font-semibold">
-                            Want to know what we are up to?
-                        </h3>
-                        <p className="mt-2">Subscribe to our newsletter.</p>
-                    </div>
+            <div className="px-2 md:px-0">
+                <div className="container mx-auto my-28 rounded-xl bg-[#072B4A]">
+                    <div className="flex flex-col lg:flex-row justify-between items-center p-4 md:p-16">
+                        <div className="text-white text-center md:text-left">
+                            <h3 className="text-[18px] md:text-xl lg:text-3xl font-semibold">
+                                Want to know what we are up to?
+                            </h3>
+                            <p className="mt-2">Subscribe to our newsletter.</p>
+                        </div>
 
-                    <div className="flex gap-4">
-                        <input
-                            type="email"
-                            className="w-48 md:w-80 rounded-lg px-3 outline-none"
-                            placeholder="Enter your email"
-                        />
-                        <button className="btn px-6 btn-info text-white">
-                            Subscribe
-                        </button>
+                        <div className="flex gap-4 mt-5 lg:mt-0">
+                            <input
+                                type="email"
+                                className="w-48 md:w-80 rounded-lg px-3 outline-none"
+                                placeholder="Enter your email"
+                            />
+                            <button className="btn px-6 btn-info text-white">
+                                Subscribe
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* query */}
-            <div className="container mx-auto mb-28">
+            <div className="container mx-auto px-3 md:px-0 mb-28">
                 <div className="flex flex-col gap-8 justify-between lg:flex-row">
                     <div className=" w-full lg:w-1/2">
                         <div className="relative">
                             <img
                                 className="w-32 lg:w-1/3"
-                                src="/public/images/ceo-img.png"
+                                src={ceoImg}
                                 alt=""
                             />
-                            <div className=" rounded-lg p-6 absolute bottom-0 left-[15%] lg:left-[30%] bg-[#A5EADA4D]/20  backdrop-blur-md">
-                                <h4 className="text-xl font-semibold">
+                            <div className=" rounded-lg p-4 md:p-6 absolute bottom-0 left-[22%] lg:left-[30%] bg-[#A5EADA4D]/20  backdrop-blur-md">
+                                <h4 className="text-base lg:text-xl font-semibold">
                                     Md. Shahinur Rahman
                                 </h4>
-                                <span>Managing Director, Mediusware Ltd</span>
+                                <span className="text-xs lg:text-base">
+                                    Managing Director, Mediusware Ltd
+                                </span>
                             </div>
                         </div>
                         <div className="mt-8">
@@ -446,7 +335,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className=" lg:w-1/2 p-6 bg-[#F0F8FF] rounded-lg">
+                    <div className=" lg:w-1/2 p-4 md:p-6 bg-[#F0F8FF] rounded-lg border shadow-lg">
                         <div>
                             <h4 className="text-2xl font-semibold mb-4">
                                 Got an idea? We’ve got the skills.
@@ -526,8 +415,14 @@ const Home = () => {
                                 <textarea
                                     name="comment"
                                     id=""
-                                    className="block w-full h-[120px] px-4 py-2 mt-2 rounded-md outline-none"
+                                    className="block w-full h-[100px] px-4 py-2 mt-2 rounded-md outline-none"
                                 ></textarea>
+                            </div>
+                            <div className="mt-5 text-right">
+                                <button className="btn px-6 btn-info text-white">
+                                    Submit Inquiry
+                                    <IoSendSharp />
+                                </button>
                             </div>
                         </form>
                     </div>

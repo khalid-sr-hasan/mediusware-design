@@ -6,7 +6,7 @@ import img4 from "/images/swd.jpg";
 const Footer = () => {
     return (
         <div className="bg-[#072B4A] pt-32 pb-8">
-            <div className="container mx-auto text-white">
+            <div className="container mx-auto px-2 md:px-0 text-white">
                 <div className="flex gap-8 flex-col lg:flex-row justify-between">
                     <div className=" w-full lg:w-1/2">
                         <div>
